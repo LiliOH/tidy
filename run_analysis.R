@@ -8,11 +8,14 @@
 # The script performs the following operations:
 
 # 1. Merges the training and the test sets to create one data set.
-# Although it is not specifically mentioned I chose to put togheter besides the training and test sets 
+
+# Although it is not specifically mentioned, I chose to put togheter besides the training and test sets 
 # (X_train.txt and X_test.txt) also the columns for the subjects and activity.
 
 library(dplyr)
+
 #test set
+
 SubjectTest<-read.table("./test/subject_test.txt")
 colnames(SubjectTest)<-"subject"
 
@@ -25,6 +28,7 @@ colnames(xTest)<-(read.table("features.txt")[,2])
 Test<-cbind(SubjectTest, yTest, xTest)
 
 #training test
+
 SubjectTrain<-read.table("./train/subject_train.txt")
 colnames(SubjectTrain)<-"subject"
 
@@ -39,17 +43,20 @@ Train<-cbind(SubjectTrain, yTrain, xTrain)
 dataset<-rbind(Train, Test)
 
 #2.Extracts only the measurements on the mean and standard deviation for each measurement.
+
 # only the measurements that have both mean() and std() are considered, therefore the meanFreq() and angles 
 # between means are not included
 
 library(dplyr)
-dataset2<-dataset[,] #this operation is necessary to get different names for duplicate column names
-mean.and.std<-select(dataset2, 1,2,contains("mean()"), contains("std"))
+
+dataset2<-dataset[,] 	#this operation is necessary to get different names for duplicate column names
+mean.and.std<-select(dataset2, 1,2, contains("mean()"), contains("std"))
 
 # 3. Uses descriptive activity names to name the activities in the data set
+
 # the expresion "descriptive activity names" might be very interpretable. Since the activity in the data set
-# appears as numeric values I chose to replace them with thei descriptive names from activity_labels.txt file.
-# to be mention, a name has already been assigned to tha activity colum in the step 1, 
+# appears as numeric values I chose to replace them with their descriptive names from activity_labels.txt file.
+# to be mention, a name has already been assigned to the activity colum in the step 1, 
 
 mean.and.std$activity[which(mean.and.std$activity==1)]<- "WALKING"
 mean.and.std$activity[which(mean.and.std$activity==2)]<- "WALKING_UPSTAIRS"
@@ -59,8 +66,9 @@ mean.and.std$activity[which(mean.and.std$activity==5)]<- "STANDING"
 mean.and.std$activity[which(mean.and.std$activity==6)]<- "LAYING"
 
 # 4. Appropriately labels the data set with descriptive variable names. 
+
 # All the variables have names, starting from step 1. I think the naming convention is fully described in the 
-# "features_info.txt"  file supplied with the test data. This file is also referred to by my codebook. So for this step
+# "features_info.txt" file supplied with the test data. This file is also referred to by my codebook. So for this step
 # I chose to tidy the labels up by applying some rules presented in the week 4 lecture - "Editing text variables" (removing "()" and "-").
 
 new.names <-make.names(sub("\\(\\)", "", names(mean.and.std),))

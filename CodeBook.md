@@ -120,7 +120,8 @@ The output data is a txt file (tidy.txt) containing a tidy data set of 4 columns
 
     tBodyAccMag.mean
         Raw data variable: tBodyAccMag-mean()
-        Description: the mean value of the euclidean magnitude of the linear body motion component of acceleration
+        Description: the mean value of the euclidean magnitude of the linear body motion component of 
+        acceleration
 
     tGravityAccMag.mean
         Raw data variable: tGravityAccMag-mean()
@@ -128,55 +129,59 @@ The output data is a txt file (tidy.txt) containing a tidy data set of 4 columns
 
     tBodyAccJerkMag.mean
         Raw data variable: tBodyAccJerkMag-mean()
-        Description: the mean value of the euclidean magnitude of the time derivative (da/dt=jerk) of the linear
-        body motion component of acceleration
+        Description: the mean value of the euclidean magnitude of the time derivative (da/dt=jerk) of the 
+        linear body motion component of acceleration
 
     tBodyGyroMag.mean
         Raw data variable: tBodyGyroMag-mean()
-        Description: the mean value of the euclidean magnitude of the angular body motion component of acceleration
+        Description: the mean value of the euclidean magnitude of the angular body motion component of 
+        acceleration
 
     tBodyGyroJerkMag.mean
         Raw data variable: tBodyGyroJerkMag-mean()
-        Description: the mean value of the euclidean magnitude of the time derivative (dw/dt) of the angular body 
-        motion component of acceleration
+        Description: the mean value of the euclidean magnitude of the time derivative (dw/dt) of the angular 
+        body motion component of acceleration
 
     fBodyAcc.mean.X
         Raw data variable: fBodyAcc-mean()-X
-        Description: the mean value of the frequency of linear body motion component of acceleration in direction of 
-        axis X. The signal was mapped from the time domain to frequncy domain through a Fast Fourier Transform (FFT)
+        Description: the mean value of the frequency of linear body motion component of acceleration in 
+        direction of axis X. The signal was mapped from the time domain to frequncy domain through a Fast 
+        Fourier Transform (FFT)
 
     fBodyAcc.mean.Y
         Raw data variable: fBodyAcc-mean()-Y
-        Description: the mean value of the frequency of linear body motion component of acceleration in direction of 
-        axis Y. The signal was mapped from the time domain to frequncy domain through a Fast Fourier Transform (FFT)
+        Description: the mean value of the frequency of linear body motion component of acceleration in 
+        direction of axis Y. The signal was mapped from the time domain to frequncy domain through a Fast 
+        Fourier Transform (FFT)
 
     fBodyAcc.mean.Z
         Raw data variable: fBodyAcc-mean()-Z
-        Description: the mean value of the frequency of linear body motion component of acceleration in direction of 
-        axis Z. The signal was mapped from the time domain to frequncy domain through a Fast Fourier Transform (FFT)
+        Description: the mean value of the frequency of linear body motion component of acceleration in 
+        direction of axis Z. The signal was mapped from the time domain to frequncy domain through a Fast 
+        Fourier Transform (FFT)
 
      fBodyAccJerk.mean.X
         Raw data variable: fBodyAccJerk-mean()-X
         Description: the mean value of the frequency of the time derivative (da/dt=jerk) of linear body motion 
-        component of acceleration in direction of axis X. The signal was mapped from the time domain to frequncy domain
-        through a Fast Fourier Transform (FFT)
+        component of acceleration in direction of axis X. The signal was mapped from the time domain to frequncy 
+        domain through a Fast Fourier Transform (FFT)
 
     fBodyAccJerk.mean.Y
         Raw data variable: fBodyAccJerk-mean()-Y
-        Description: the mean value of the frequency of the time derivative (da/dt=jerk) of linear body motion component
-        of acceleration in direction of axis Y. The signal was mapped from the time domain to frequncy domain through a 
-        Fast Fourier Transform (FFT)
+        Description: the mean value of the frequency of the time derivative (da/dt=jerk) of linear body motion 
+        component of acceleration in direction of axis Y. The signal was mapped from the time domain to frequncy 
+        domain through a Fast Fourier Transform (FFT)
 
     fBodyAccJerk.mean.Z
         Raw data variable: fBodyAccJerk-mean()-Z
-        Description: the mean value of the frequency of the time derivative (da/dt=jerk) of linear body motion component 
-        of acceleration in direction of axis Z. The signal was mapped from the time domain to frequncy domain through a 
-        Fast Fourier Transform (FFT)
+        Description: the mean value of the frequency of the time derivative (da/dt=jerk) of linear body motion 
+        component of acceleration in direction of axis Z. The signal was mapped from the time domain to frequncy 
+        domain through a Fast Fourier Transform (FFT)
 
     fBodyGyro.mean.X
         Raw data variable: fBodyGyro-mean()-X
-        Description: the mean value of the frequency of angular body motion component of acceleration in direction of 
-        axis X. The signal was mapped from the time domain to frequncy domain through a Fast Fourier Transform (FFT)
+        Description: the mean value of the frequency of angular body motion component of acceleration in direction 
+        of axis X. The signal was mapped from the time domain to frequncy domain through a Fast Fourier Transform (FFT)
 
     fBodyGyro.mean.Y
         Raw data variable: fBodyGyro-mean()-Y

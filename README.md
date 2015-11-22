@@ -37,7 +37,7 @@ The script performs the following operations:
    
    All the variables have names, starting from step 1. The naming convention is fully described in the "features_info.txt" file supplied with the test data. This file is also referred to by the codebook. The labels are tidy up by applying some rules presented in the week 4 lecture - "Editing text variables" (removing "()" and "-").
    
-   5.From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+   5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
    
    A final tidy data set is created containing 4 columns, namely subject, activity, measurement(variable), and the computed mean values for 30 subjects X 6 activities X 66 measurements = 11880 rows, which was saved as tidy.txt file. Additional description of this data set is available in the associated CodeBook.md file of the present repository.
 
