@@ -1,39 +1,54 @@
-## Code Book for the generated tidy data set
+## Code Book 
 
-This code book describes the variables, the data, and transformations performed to clean up the original data set.
+This code book describes the data, the variables, and all transformations performed to clean up the original data set.
 
-### Data set
 
-This tidy data set contains 4 columns (variables) and 11880 rows, for 30 human subjects x 6 activities x66 measurements
+### Input Data
+
+The data was collected from the accelerometers from the Samsung Galaxy S smartphone and may be downloaded from here:
+
+http://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+A full description of the experiments is available here:
+
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+### Output Data
+
+The output data is a txt file (tidy.txt) containing a tidy data set of 4 columns (variables) and 11880 rows, for 30 human subjects x 6 activities x66 measurements.
 
 ### Variables
 
-    subject
+    variable 1
+	Name: subject
         Type: integer
         Values: [1 : 30]
         Description: human subject involved in experiment
-        Raw data source: files train/subject_train.txt and test/subject_test.txt
+        Raw data source: train/subject_train.txt and test/subject_test.txt files
         Transformation: none
 
-    activity
+    Variable 2
+	Name: activity
         Type: character
         Values: LAYING, SITTING, STANDING, WALKING, WALKING_DOWNSTAIRS, WALKING_UPSTAIRS
-        Description: specific activity performed by the human subject when the measurement was made
-        Raw data source: files train/y_train.txt and test/y_test.txt
+        Description: specific activity performed by the human subjects when the measurements were made
+        Raw data source: train/y_train.txt and test/y_test.txt files
         Transformation: replaced numeric values with descriptive activity names
 
-    measurement
-        Type: factor with 68 levels
+    Variable 3
+	Name: measurement
+        Type: factor with 66 levels
         Values: described below
-        Description: the names of "the measurements on the mean and standard deviation for each measurement" (sounds a bit redundant, but that is how it was formulated in the assignment)
-        Raw data source: file features.txt
-        Transformation: Extracted only the measurements on the mean or standard deviation and tidied up using rules presented in the week 4 lecture - "Editing text variables" (subjectively chosen).
+        Description: the names of the measurements on the mean and standard deviation for each measurement 
+        Raw data source: features.txt file 
+        Transformation: extracted only the measurements on the mean or standard deviation; the variable names were tidied up using several rules presented in the week 4 lecture - "Editing text variables" (subjectively chosen).
 
-    mean
+    Variable 4
+    	Name: mean
         Type: numeric (decimal)
         Values: (-1.0 : 1.0)
         Description: the average value of each variable for each activity and each subject
-        Raw data source: selected columns from files train/X_train.txt and test/X_test.txt
+        Raw data source: selected columns from train/X_train.txt and test/X_test.txt files 
         Transformation: Only the "mean" or "std" variables were selected and gathered into rows. Data was grouped by each combination of subject, activity, and variable (measurement), and averages were computed for each of these groups.
 
  ## Values in the measurement column
@@ -301,8 +316,3 @@ This tidy data set contains 4 columns (variables) and 11880 rows, for 30 human s
     fBodyBodyGyroJerkMag.std
         Raw data variable: fBodyBodyGyroJerkMag-std()
         Description: the standard deviation of the frequency of the euclidean magnitude of the time derivative (dw/dt) of angular body motion component of acceleration. The signal was mapped from the time domain to frequncy domain through a Fast Fourier Transform (FFT)
-
-    For more information regarding the measurements made and raw data collection please see the publication describing this experiment and the data collection procedure at
-
-    https://www.elen.ucl.ac.be/Proceedings/esann/esannpdf/es2013-84.pdf
-
